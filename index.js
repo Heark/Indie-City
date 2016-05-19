@@ -1,8 +1,16 @@
-// This is the default "main" file, specified from the root package.json file
-// The ready function is excuted when the DOM is ready for usage.
-
-var ready = require('enyo/ready');
+var ready = require('enyo/ready'),
+    kind = require('enyo/kind'),
+		Toolbar = require('onyx/Toolbar'),
+    Application = require('enyo/Application');
 
 ready(function() {
-	console.log('Hello World!');
+    var MAIN_METHOD = kind({
+        name: "_main",
+        components: [
+            {kind: Toolbar, content: "Indie City"},
+            {kind: Toolbar, content: "Welcome!"}
+        ]
+    });
+
+    new Application({view: MAIN_METHOD});
 });
