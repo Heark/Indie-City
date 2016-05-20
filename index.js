@@ -1,6 +1,6 @@
 var ready = require('enyo/ready'),
     kind = require('enyo/kind'),
-		Toolbar = require('onyx/Toolbar'),
+    Toolbar = require('onyx/Toolbar'),
     Application = require('enyo/Application');
 
 ready(function() {
